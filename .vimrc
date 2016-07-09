@@ -73,7 +73,7 @@ set laststatus=2
 " Gruvbox options
 colorscheme gruvbox
 set background=dark    " Setting dark mode
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#enabled = 1
 
 "Airline fonts from Powerline
 let g:airline_powerline_fonts = 1
