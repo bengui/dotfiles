@@ -28,6 +28,26 @@ Plugin 'morhetz/gruvbox'
 "Airline
 Plugin 'vim-airline/vim-airline'
 
+"NerdTree
+Plugin 'scrooloose/nerdTree'
+
+"Easymotion move inside the file easily
+Plugin 'easymotion/vim-easymotion'
+
+"HTML 5
+Plugin 'othree/html5.vim'
+Plugin 'othree/html5-syntax.vim'
+
+"Javascript plugin
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+
+"Node plugin
+Plugin 'moll/vim-node'
+
+"Real time syntax check
+Plugin 'scrooloose/syntastic'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -58,9 +78,26 @@ let g:airline#extensions#tabline#enabled = 1
 "Airline fonts from Powerline
 let g:airline_powerline_fonts = 1
 
+" Easymove
+map <Leader> <Plug>(easymotion-prefix)
+
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set relativenumber 
 set number          
 
 "Tab size
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+"Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['jshint']
+
+" show any linting errors immediately
+let g:syntastic_check_on_open = 1
