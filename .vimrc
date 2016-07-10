@@ -48,6 +48,9 @@ Plugin 'moll/vim-node'
 "Real time syntax check
 Plugin 'scrooloose/syntastic'
 
+" Git line changes
+Plugin 'airblade/vim-gitgutter'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -101,3 +104,6 @@ let g:syntastic_javascript_checkers = ['jshint']
 
 " show any linting errors immediately
 let g:syntastic_check_on_open = 1
+
+" Autocomplete CSS
+:set omnifunc=csscomplete#CompleteCSS
