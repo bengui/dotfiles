@@ -51,6 +51,12 @@ Plugin 'scrooloose/syntastic'
 " Git line changes
 Plugin 'airblade/vim-gitgutter'
 
+" Autocomplete - Remember to
+" cd ~/.vim/bundle/YouCompleteMe
+" ./install.py --tern-completer
+" every time you update the plugin
+Plugin 'Valloric/YouCompleteMe'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -107,3 +113,8 @@ let g:syntastic_check_on_open = 1
 
 " Autocomplete CSS
 :set omnifunc=csscomplete#CompleteCSS
+
+" YouCompleteMe options
+" Do not show preview window
+let g:ycm_add_preview_to_completeopt = 0
+set completeopt-=preview
