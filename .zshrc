@@ -89,5 +89,5 @@ fi
 TERM=screen-256color
 
 # AndroidDev PATH
-export PATH=${PATH}:~/android-sdk-linux/tools
-export PATH=${PATH}:~/android-sdk-linux/platform-tools
+export PATH=${PATH}:~/Android/Sdk/tools
+export PATH=${PATH}:~/Android/Sdk/platform-tools

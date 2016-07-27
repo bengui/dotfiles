@@ -51,6 +51,9 @@ Plugin 'scrooloose/syntastic'
 " Git line changes
 Plugin 'airblade/vim-gitgutter'
 
+" Nerd Tree commenter
+Plugin 'scrooloose/nerdcommenter'
+
 " Autocomplete - Remember to
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.py --tern-completer
@@ -107,6 +110,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_loc_list_height=5
 
 " show any linting errors immediately
 let g:syntastic_check_on_open = 1
