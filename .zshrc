@@ -5,7 +5,7 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -83,11 +83,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #export TERM="screen-256color"
-if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-fi
+#if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+#    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+#fi
 TERM=screen-256color
 
 # AndroidDev PATH
 export PATH=${PATH}:~/Android/Sdk/tools
 export PATH=${PATH}:~/Android/Sdk/platform-tools
+
+#Default user
+DEFAULT_USER="benjamin.massello"
+
+eval $(thefuck --alias)

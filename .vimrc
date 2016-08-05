@@ -122,3 +122,6 @@ let g:syntastic_check_on_open = 1
 " Do not show preview window
 let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview
+
+" Change key delay
+set timeoutlen=1000 ttimeoutlen=0
