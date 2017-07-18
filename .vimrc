@@ -60,6 +60,9 @@ Plugin 'scrooloose/nerdcommenter'
 " every time you update the plugin
 Plugin 'Valloric/YouCompleteMe'
 
+" Fuzzy file, buffer, mru, tag, etc finder.
+Plugin 'ctrlpvim/ctrlp.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -93,7 +96,7 @@ let g:airline_powerline_fonts = 1
 " Easymove
 map <Leader> <Plug>(easymotion-prefix)
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/.vim/bundle/p.vim
 set relativenumber 
 set number          
 
