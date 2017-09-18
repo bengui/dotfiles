@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+syntax on
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -26,7 +27,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'morhetz/gruvbox'
 
 "Airline
-Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline'
+let g:airline_powerline_fonts = 1
 
 "NerdTree
 Plugin 'scrooloose/nerdTree'
@@ -46,7 +48,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'moll/vim-node'
 
 "Real time syntax check
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 
 " Git line changes
 Plugin 'airblade/vim-gitgutter'
@@ -58,7 +60,7 @@ Plugin 'scrooloose/nerdcommenter'
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.py --tern-completer
 " every time you update the plugin
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -71,7 +73,7 @@ filetype plugin indent on    " required
 "
 " Brief help
 " :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+"  :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
@@ -81,7 +83,7 @@ filetype plugin indent on    " required
 "Powerline
 "set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 " Always show statusline
-set laststatus=2
+"set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 "set t_Co=256
 
@@ -91,7 +93,7 @@ set background=dark    " Setting dark mode
 "let g:airline#extensions#tabline#enabled = 1
 
 "Airline fonts from Powerline
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 " Easymove
 map <Leader> <Plug>(easymotion-prefix)
@@ -104,19 +106,19 @@ set number
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 "Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_loc_list_height=5
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_javascript_checkers = ['jshint']
+"let g:syntastic_loc_list_height=5
 
 " show any linting errors immediately
-let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_open = 1
 
 " Autocomplete CSS
 :set omnifunc=csscomplete#CompleteCSS

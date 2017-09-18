@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    if [ $(whoami) = "benjamin.massello" ]
+    if [ $(whoami) = "bmassell" ]
     then
-        if [ $(hostname) = "AR-IT02179" ]
+        if [ $(hostname) = "WASE-AM06001718" ]
         then
             PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\w\[\033[00m\]\$ '
         else
