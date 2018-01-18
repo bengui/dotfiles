@@ -141,3 +141,7 @@ export TERM="screen-256color"
 #Android
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+#Android Project
+alias boom='./gradlew --refresh-dependencies clean assembleDebug test'
+
