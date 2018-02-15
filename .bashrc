@@ -144,4 +144,4 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 #Android Project
 alias boom='./gradlew --refresh-dependencies clean assembleDebug test'
-
+alias focusedactivity='adb shell dumpsys activity | grep mFocusedActivity'
