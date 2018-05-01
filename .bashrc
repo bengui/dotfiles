@@ -145,3 +145,12 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 #Android Project
 alias boom='./gradlew --refresh-dependencies clean assembleDebug test'
 alias focusedactivity='adb shell dumpsys activity | grep mFocusedActivity'
+alias input='adb shell input text '
+alias input-enter='adb shell input keyevent 66'
+alias input-next='adb shell input keyevent 16'
+alias install='./gradlew installDebug'
+alias install-clean='./gradlew --refresh-dependencies clean installDebug'
+
+project-dependencies() {
+    ./gradlew :$1:dependencies --configuration debugCompileClasspath
+}
