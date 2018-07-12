@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -154,3 +154,10 @@ alias install-clean='./gradlew --refresh-dependencies clean installDebug'
 project-dependencies() {
     ./gradlew :$1:dependencies --configuration debugCompileClasspath
 }
+
+project-dependencies-clean() {
+    ./gradlew :$1:dependencies --configuration debugCompileClasspath | grep "com.disney.wdpro" | grep -v ">" | grep -v "*" | grep -v "disney-log"
+}
+
+# Git 
+alias git-clear-branches="git branch | grep -v "master" | xargs git branch -D"
