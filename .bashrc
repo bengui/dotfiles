@@ -59,7 +59,7 @@ fi
 if [ "$color_prompt" = yes ]; then
     if [ $(whoami) = "bmassell" ]
     then
-        if [ $(hostname) = "WASE-AM06001718" ]
+        if [ $(hostname) = "C02V80U9HTDH" ]
         then
             PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\w\[\033[00m\]\$ '
         else
@@ -150,6 +150,11 @@ alias input-enter='adb shell input keyevent 66'
 alias input-next='adb shell input keyevent 16'
 alias install='./gradlew installDebug'
 alias install-clean='./gradlew --refresh-dependencies clean installDebug'
+alias publish='./gradlew assembleDebug publishToMavenLocal'
+alias rebuild='./gradlew --refresh-dependencies clean assembleDebug'
+
+alias clean-mvn-local='rm -rf ~/.m2/repository/com/disney/wdpro/'
+alias list-mvn-local='ls ~/.m2/repository/com/disney/wdpro/*'
 
 project-dependencies() {
     ./gradlew :$1:dependencies --configuration debugCompileClasspath
