@@ -114,17 +114,17 @@ alias input-next='adb shell input keyevent 16'
 alias install='./gradlew installDebug'
 alias install-clean='./gradlew --refresh-dependencies clean installDebug'
 alias publish='./gradlew assembleDebug publishToMavenLocal'
-alias rebuild='./gradlew --refresh-dependencies clean assembleDebug'
+alias assembleDebug='./gradlew --refresh-dependencies clean assembleDebug'
 
-alias clean-mvn-local='rm -rf ~/.m2/repository/com/disney/wdpro/'
-alias list-mvn-local='ls ~/.m2/repository/com/disney/wdpro/*'
+alias clean-mvn-local='rm -rf ~/.m2/repository/'
+alias list-mvn-local='ls ~/.m2/repository/'
 
 project-dependencies() {
     ./gradlew :$1:dependencies --configuration debugCompileClasspath
 }
 
 project-dependencies-clean() {
-    ./gradlew :$1:dependencies --configuration debugCompileClasspath | grep "com.disney.wdpro" | grep -v ">" | grep -v "*" | grep -v "disney-log"
+    ./gradlew :$1:dependencies --configuration debugCompileClasspath | grep "com.benguiman" | grep -v ">" | grep -v "*" | grep -v "disney-log"
 }
 
 # Git
