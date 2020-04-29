@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/benguiman/.oh-my-zsh"
+export ZSH="/Users/bmassell/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,7 +68,7 @@ ZSH_THEME="simple"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git adb gradle)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,12 +119,24 @@ alias assembleDebug='./gradlew --refresh-dependencies clean assembleDebug'
 alias clean-mvn-local='rm -rf ~/.m2/repository/'
 alias list-mvn-local='ls ~/.m2/repository/'
 
+currentChildFragment() {
+    adb shell dumpsys activity $1 | grep "Child FragmentManager"
+}
+
+currentFragment() {
+    adb shell dumpsys activity $1 | grep "FragmentManager"
+}
+
+currentActivity() {
+    adb shell dumpsys activity $1 | grep "ACTIVITY" -a2
+}
+
 project-dependencies() {
-    ./gradlew :$1:dependencies --configuration debugCompileClasspath
+./gradlew :$1:dependencies --configuration debugCompileClasspath
 }
 
 project-dependencies-clean() {
-    ./gradlew :$1:dependencies --configuration debugCompileClasspath | grep "com.benguiman" | grep -v ">" | grep -v "*" | grep -v "disney-log"
+./gradlew :$1:dependencies --configuration debugCompileClasspath | grep $2 | grep -v ">" | grep -v "*" 
 }
 
 # Git
