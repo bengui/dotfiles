@@ -2,6 +2,10 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax on
 
+" spell check
+" z= displays correction suggestions
+set spell spelllang=en_us
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
