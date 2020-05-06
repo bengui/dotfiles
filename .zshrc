@@ -115,6 +115,7 @@ alias install='./gradlew installDebug'
 alias install-clean='./gradlew --refresh-dependencies clean installDebug'
 alias publish='./gradlew assembleDebug publishToMavenLocal'
 alias assembleDebug='./gradlew --refresh-dependencies clean assembleDebug'
+alias lastCrash='adb logcat -d | grep -a20 "FATAL EXCEPTION" | tail -n 20'
 
 alias clean-mvn-local='rm -rf ~/.m2/repository/'
 alias list-mvn-local='ls ~/.m2/repository/'
