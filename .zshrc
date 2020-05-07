@@ -120,6 +120,8 @@ alias lastCrash='adb logcat -d | grep -a20 "FATAL EXCEPTION" | tail -n 20'
 alias clean-mvn-local='rm -rf ~/.m2/repository/'
 alias list-mvn-local='ls ~/.m2/repository/'
 
+alias reverse-proxy='adb reverse tcp:7777 tcp:8888'
+
 currentChildFragment() {
     adb shell dumpsys activity $1 | grep "Child FragmentManager"
 }
